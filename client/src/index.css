@@ -49,16 +49,18 @@ body {
   padding: 5px;
 }
 .save-wrapper {
+  display: flex;
   position: relative;
   width: 75%;
   margin: 1rem auto;
 }
 .save-button {
-  position: absolute;
   top: 25px;
   right: 25px;
   border: 1px solid grey;
   padding: 5px 10px;
+  margin: 10px;
+  height: 16px;
   background-color: lightseagreen;
 }
 .save-button:hover {

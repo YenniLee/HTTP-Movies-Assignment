@@ -33,7 +33,8 @@ export default class Movie extends React.Component {
     addToSavedList(this.state.movie);
   };
 
-  deleteMovie = () => {
+  deleteMovie = e => {
+    e.preventDefault();
     axios 
       .delete(`http://localhost:5000/api/movies/${this.state.movie.id}`)
       .then(res => {
@@ -46,7 +47,7 @@ export default class Movie extends React.Component {
     if (!this.state.movie) {
       return <div>Loading movie information...</div>;
     }
-
+    
     return (
       <div className="save-wrapper">
         <MovieCard movie={this.state.movie} />
